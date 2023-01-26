@@ -1,0 +1,128 @@
+cd my-app -> npm start
+
+my-app = this is our project name
+   node_modules =it contains all packages and dependencies installed.(babel. webpack and etc.)
+   public(folder)
+        favicon.ico  its a favicon for website
+        index.html= hold html template(impo)
+        manifest.json =it provides meta data used when your web app is installed on users mobile device or desktop
+   src (file)
+        App.css=its css file related to app.js but its global
+        App.js=its parent component of your react app
+        App.test.js=its test environment
+        index.css=its css file related to index.js but its global
+        index.js=its js entry point(impo)
+        logo.svg=react logo file
+        service.worker.js=it can help to acess website offline
+
+
+
+
+
+
+        render()=> the  render() method is only required method in a class component.it examines this.props and this.state
+         it returns one of thew following type:
+           React elements- these are created via JSX(not required)
+           Arrays and fragments - it is used to return multiple elements from render.
+           portals - it is used to render chilidren into a different DOM subtree
+           string and numbers - these are rendered as text nodes  in the DOM.
+           Booleans or null - it returns nothing
+
+
+       react elements-  
+           you can create a react element using React.creeateElement() method but there is easy way to create element via jsx.
+           
+           using creeateElement() method=
+               React.creeateElement(type,props,chilidren)
+                 type= h1, p, button, etc
+                 props=the propoties object.
+                    ex-{style:{color:"blue"}} or className or event handlers etc.
+                 chilidren=anything you need to pass btween the dom elements.   
+
+               ex- React.creeateElement('hi',null,"hello world")
+
+                      or
+
+                 using jsx=
+               <h1>hello world </h1> 
+               
+               
+
+
+      ReactDOM.render(element,DOMnode)-
+        it takes react element and render it to a DOM node.
+        
+        syntax-ReactDOM.render(element,DOMnode)
+               ->the first argument is which component orelement needs to render in the dom.
+               ->the second argument is where to render in the dom.
+
+               ex-ReactDOM.render(<App/>,Document.getElementById("root"));
+
+
+              
+       React fragment-
+        fragment is used to group a list of chilidren without adding extra nodes to the DOM.
+        syntax- <React.fragment>  </React.fragment>  or <>  </>
+
+          ex-   <React.fragment> 
+                    <h1>hello</h1>
+                      <h2>hello  world</h2>
+                </React.fragment> 
+
+
+
+        syntax-   <React.fragment key={id}> 
+                
+                  </React.fragment>    
+
+
+          ex-<React.fragment key={item.id}> 
+                <h1>{item.id}</h1>
+                </React.fragment>                
+
+
+
+ component-
+    -componenets are building blocks of any React app.
+    -components let you split the UI into indepedent,reuseable pieces, and think about each piece in isolation.
+    -components are like js function.
+    -always start component names with a capital letter.because react treats componets starting with lower case as DOM tags.
+  
+  function component-
+     - it is  a js function which acepts a single "props" object argument with data  and returns a react element.
+
+     syntax-
+        function  func_name(){
+          return react element
+        }
+      ex- function Student(){
+              return <h1>hello</h1>
+      }  
+
+
+       syntax-function  func_name(props){
+          return react element
+        }
+
+        ex- function Student(props){
+              return <h1>hello</h1>
+      }  
+      ex- function Student(props){
+              return <h1>hello{{props.name}</h1>
+      }  
+ class Component-
+    -a class component requires you to extend form React.Component . rhe class must implement a render() member function  which returns a react component to be rendered. similar to a return  value of functional component. in a clas based component,props are acessible via this.props .
+
+    syntax-
+        class class-name extends component{
+          render(){
+             return react.element
+          }
+        } 
+
+      ex-
+         class class-name extends component{
+          render(){
+             return <h1> hello {this.props.name}</h1>
+          }
+        }       

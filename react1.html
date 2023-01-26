@@ -1,0 +1,113 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    minified cdn link-
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./react1.css">
+</head>
+<body>
+    <div id="root">kk</div>
+    <script>
+      
+        class App extends React.Component{
+            render(){
+                // that ccept 3 arguments i,e (type,props,chilidren)
+                return React.createElement('div',null,'hello world')
+            }
+        }
+        // that accept 2 parameter(element, DOMnode)
+        ReactDOM.render(
+            React.createElement(App,null),document.getElementById("root")
+        );
+    </script> -->
+
+
+
+
+<!-- 
+    <div id="root"></div>
+    <script>
+      
+        class App extends React.Component{
+            render(){
+                // that ccept 3 arguments i,e (type,props,chilidren)
+                return React.createElement('div',null,React.createElement('h1',null,'hello rajesh'))
+            }
+        }
+        // that accept 2 parameter(element, DOMnode)
+        ReactDOM.render(
+            React.createElement(App,null),document.getElementById("root")
+        );
+    </script>
+</body>
+</html> --> -->
+
+
+
+<!-- using babel  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- minified cdn link- -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./react1.css">
+</head>
+<body>
+        <div id="root"></div>
+        <p class="para">click me !</p>
+        <h1 id="point">head</h1>
+    <script type="text/babel">
+      
+        class App extends React.Component{
+            render(){
+                return(
+                    <div>
+                        <h1>
+                            hello react ,using babel,using jsx
+                        </h1>
+                    </div>
+                )
+            }
+        }
+        // that accept 2 parameter(element, DOMnode)
+        ReactDOM.render(
+            React.createElement(App,null),document.getElementById("root")
+        );
+        // using jquery
+        $("p").click(function(){
+            $(this).hide(function(){
+                $("point").show();
+            });
+        })
+    </script>
+</body>
+</html>

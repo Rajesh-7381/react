@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="module">
+      // import { data as d } from "./module3.js";
+      // console.log(d);
+
+      // import { totalNumber } from "./module2.js";
+
+
+      // another way to import all file
+      import * as func from "./module3.js";
+      console.log(func.data);
+
+      import { totalNumber } from "./module2.js";
+
+      // in the help of default
+      import  total from "./module2.js"
+      console.log(total)
+
+      // //  in the help of default we can write anything instead of total
+      // import  DOM from "./module2.js"
+      // console.log(DOM)
+      
+
+    </script>
+  </body>
+</html>
